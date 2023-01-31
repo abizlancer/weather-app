@@ -1,10 +1,16 @@
+@mixin fonts($fz, $lh, $color, $fw) {
+  font-size: $fz;
+  line-height: $lh;
+  color: $color;
+  font-weight: $fw;
+}
 
 $montserrat: ('Regular', 400), ('Medium', 500), ('Bold', 700);
 
 @each $name, $weight in $montserrat {
   @font-face {
     font-family: 'montserrat';
-    src: url(`/public/fonts/montserrat/Montserrat-${$name}.ttf`) format('truetype');
+    src: url(`/public/fonts/montserrat/Montserrat-#{$name}.ttf`) format('truetype');
     font-weight: $weight;
   }
 }
