@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: 'montserrat';
+}
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --blue: #4793FF;
+  --gray: #939CB0;
+  --lg-blue: rgba(71, 147, 255, 0.2);
+}
+$white: var(--white);
+$black: var(--black);
+$blue: var(--blue);
+$gray: var(--gray);
+$lg-blue: var(--lg-blue);
+.container {
+  max-width: 1320px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
