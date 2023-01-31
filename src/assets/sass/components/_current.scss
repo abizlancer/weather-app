@@ -1,0 +1,94 @@
+.current {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+
+  &__day,
+  &__temp {
+    background: $white;
+    box-shadow: 2px 5px 25px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+  }
+  &__day {
+    grid-column: span 1;
+    padding: 20px 20px 21px 18px;
+    &--temp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        display: flex;
+        flex-direction: column;
+        @include fonts(40px, 48px, $black);
+        span {
+          @include fonts(96px, 117px, $blue, 500);
+        }
+      }
+      img {
+        width: 119px;
+        height: 119px;
+      }
+    }
+    &--info {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      p {
+        @include fonts(25px, 30px, $gray);
+      }
+    }
+  }
+  &__temp {
+    position: relative;
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    &--bg {
+      max-width: 460px;
+      width: 100%;
+      // height: 100%;
+      object-fit: contain;
+      display: flex;
+    }
+    &--content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 42px 32px;
+
+      &--items {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        span {
+          @include fonts(14px, 17px, $gray)
+        }
+        p {
+          @extend span;
+          color: $black;
+        }
+      }
+    }
+    &--img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: $white;
+      box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
